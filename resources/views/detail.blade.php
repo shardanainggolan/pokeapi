@@ -143,12 +143,14 @@
 
 		var pokeList = localStorage.getItem('pokeLists');
 
-		if(isInArray(id, pokeList)) {
-			var exists = new bootstrap.Toast(existsToast)
+		if(pokeList != undefined) {
+			if(isInArray(id, pokeList)) {
+				var exists = new bootstrap.Toast(existsToast)
 
-			exists.show()
+				exists.show()
 
-			return
+				return
+			}
 		}
 	
 		var d = Math.random()
